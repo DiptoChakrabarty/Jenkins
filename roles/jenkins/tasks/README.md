@@ -59,3 +59,29 @@ Install Jenkins and enable it
 
 ```
 
+## install_rpm.yml
+[Jenkins Repository Url for Centos Systems](https://pkg.jenkins.io/redhat-stable/)
+
+```
+Install wget
+Make yum repository for jenkins
+Add Gpgcheck key 
+
+
+- name: create yum directory
+  file:
+        path: "{{yum.path}}"
+        state: directory
+
+- name: make yum repo
+  yum_repository:
+        name: jenkins
+        baseurl: "{{jenkins.rpm_url}}"
+        description: jenkins yum repo
+        gpgcheck: yes 
+        gpgkey: "{{yum.key}}"
+
+Install Jenkins using yum
+
+Enable and start jenkins
+
