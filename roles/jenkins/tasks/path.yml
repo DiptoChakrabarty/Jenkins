@@ -1,0 +1,9 @@
+- name: Set Java HOME
+  lineinfile: 
+          path: "{{java.path}}"
+          line: "{{item}}"
+          state: present
+  loop:
+        - JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
+        - export JAVA_HOME
+        - PATH=$PATH:$JAVA_HOME

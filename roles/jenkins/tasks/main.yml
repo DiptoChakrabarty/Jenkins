@@ -1,2 +1,3 @@
 # tasks file for jenkins
 - include: java.yml
+- include: path.yml

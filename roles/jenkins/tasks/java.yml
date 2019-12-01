@@ -5,7 +5,7 @@
 
 - name : Adding java 1.8 
   package:
-      name: "{{item}}"
+      name: "{{java.version}}"
       state: present
   loop:
     - openjdk-8-jdk

@@ -1,2 +1,6 @@
 ---
 # vars file for jenkins
+java:
+    version: "openjdk-8-jdk"
+    path: /home/chuck/.bashrc.back
+
