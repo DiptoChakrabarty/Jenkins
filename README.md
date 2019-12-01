@@ -33,7 +33,11 @@
 ```
 
 
-  
+Ansible will configure and setup jenkins in your server
+
+![Ansible Output](https://github.com/DiptoChakrabarty/Jenkins-eazy-setup/blob/master/images/img1)
+
+![Final Result](https://github.com/DiptoChakrabarty/Jenkins-eazy-setup/blob/master/images/img2)  
 
 
 
