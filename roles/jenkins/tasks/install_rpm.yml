@@ -1,0 +1,28 @@
+- name: install wget
+  package:
+        name: wget  
+        state: present
+- name: create yum directory
+  file:
+        path: "{{yum.path}}"
+        state: directory
+
+- name: make yum repo
+  yum_repository:
+        name: jenkins
+        baseurl: "{{jenkins.rpm_url}}"
+        description: jenkins yum repo
+        gpgcheck: yes 
+        gpgkey: "{{yum.key}}"
+
+- name: install jenkins
+  yum:
+      name: jenkins
+      state: present
+
+- name: jenkins starting
+  service:
+      name: jenkins
+      state: started
+      enabled : yes
+  

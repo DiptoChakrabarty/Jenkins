@@ -1,3 +1,12 @@
+- name: Ensure dependencies are installed.
+  apt:
+    name:
+      - curl
+      - apt-transport-https
+      - gnupg
+    state: present
+
+
 - name: install wget
   package:
         name: wget  
@@ -16,11 +25,19 @@
         repo: "{{jenkins.deb_url}}"
         state: present
 
-
-
-
+- name: update and upgrade packages
+  apt:
+      upgrade: dist
+      name: "*"
+      state: latest
 - name: install jenkins
-  package:
+  apt:
       name: jenkins
       state: present
+  
+- name: jenkins starting
+  service:
+      name: jenkins
+      state: started
+      enabled : yes
   
