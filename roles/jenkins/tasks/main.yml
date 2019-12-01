@@ -2,7 +2,12 @@
   loop:
       - java.yml
       - path.yml
-      - checkos.yml
       
 
+- name: check os family
+  include: install_deb.yml
+  when: ansible_os_family == 'Debian'
 
+- name: for rpm systems
+  include: install_rpm.yml
+  when: ansible_os_family == 'Centos'

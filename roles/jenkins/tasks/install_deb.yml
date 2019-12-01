@@ -25,9 +25,14 @@
         repo: "{{jenkins.deb_url}}"
         state: present
 
+- name: install aptitude
+  apt:
+      name: aptitude
+      state: present
+
 - name: update and upgrade packages
   apt:
-      upgrade: dist
+      update_cache: yes
       name: "*"
       state: latest
 - name: install jenkins
