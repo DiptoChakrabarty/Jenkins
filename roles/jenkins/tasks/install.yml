@@ -7,12 +7,10 @@
         path: "{{yum.path}}"
         state: directory
 - name: get jenkins
-  yum_repository:
-        name: jenkins
-        description: a jenkins yum repository
-        baseurl: "{{jenkins.url}}"
-        gpgcheck: yes 
-        gpgkey: "{{yum.key}}"
+  apt_repository:
+        repo: "{{yum.repo}}"
+        state: presemt
+        
 
 
 
