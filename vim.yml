@@ -1,6 +1,0 @@
-- hosts: all
-  tasks:
-          - package:
-                  name: vim
-                  state: present
-
