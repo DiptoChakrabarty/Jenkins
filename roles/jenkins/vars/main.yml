@@ -6,6 +6,7 @@ java:
 jenkins:
     rpm_url:  https://pkg.jenkins.io/redhat-stable/jenkins.repo
     deb_url: deb https://pkg.jenkins.io/debian binary/
+    deb_url_key: https://pkg.jenkins.io/debian/jenkins.io.key
 yum:
     path: /etc/yum.repos.d
     key: https://pkg.jenkins.io/redhat-stable/jenkins.io.key

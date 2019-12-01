@@ -6,6 +6,11 @@
   file:
         path: "{{yum.path}}"
         state: directory
+
+- name: Add Jenkins apt repository key.
+  apt_key:
+    url: "{{ jenkins.deb_url_key }}"
+    state: present
 - name: get jenkins
   apt_repository:
         repo: "{{jenkins.deb_url}}"
