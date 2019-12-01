@@ -1,0 +1,13 @@
+- name : Removing other java version
+  package:
+      name: java
+      state: absent
+
+- name : Adding java 1.8 
+  package:
+      name: "{{item}}"
+      state: present
+  loop:
+    - openjdk-8-jdk
+
+
