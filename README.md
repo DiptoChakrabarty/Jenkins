@@ -25,7 +25,7 @@
 
 ### Description
 ```
-* Install Java Version 1.8
+* Install correct Java Version
 * Change Java Home Path to new one permanently
 * Add Jenkins Repository to package manager
 * Install Jenkins
@@ -37,9 +37,9 @@ Ansible will configure and setup jenkins in your server
 
 ![Ansible Output](https://github.com/DiptoChakrabarty/Jenkins-eazy-setup/blob/master/images/img1)
 
-![Final Result of configuration](https://github.com/DiptoChakrabarty/Jenkins-eazy-setup/blob/master/images/img2)  
+![Final Result](https://github.com/DiptoChakrabarty/Jenkins-eazy-setup/blob/master/images/img2)  
 
 
-
+ Code has  been configured for both Debian  and Centos Based Systems 
 
 
