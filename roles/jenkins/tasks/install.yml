@@ -8,9 +8,9 @@
         state: directory
 - name: get jenkins
   apt_repository:
-        repo: "{{yum.repo}}"
-        state: presemt
-        
+        repo: "{{jenkins.deb_url}}"
+        state: present
+
 
 
 

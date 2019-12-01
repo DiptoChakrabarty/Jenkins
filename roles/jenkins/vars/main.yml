@@ -4,7 +4,8 @@ java:
     version: "openjdk-8-jdk"
     path: /home/chuck/.bashrc.back
 jenkins:
-    url:  https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    rpm_url:  https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    deb_url: deb https://pkg.jenkins.io/debian binary/
 yum:
     path: /etc/yum.repos.d
     key: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
