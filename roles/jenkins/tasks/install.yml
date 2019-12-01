@@ -2,12 +2,19 @@
   package:
         name: wget  
         state: present
+- name: create yum directory
+  file:
+        path: "{{yum.path}}"
+        state: directory
 - name: get jenkins
-  uri:
-      url: "{{jenkins.url}}"
+  yum_repository:
+        name: jenkins
+        description: a jenkins yum repository
+        baseurl: "{{jenkins.url}}"
+        gpgcheck: yes 
+        gpgkey: "{{yum.key}}"
 
-- name: import keys
-  command: rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
 
 - name: install jenkins
   yum:
