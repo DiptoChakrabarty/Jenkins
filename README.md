@@ -23,6 +23,15 @@
 
 
 
+### Description
+```
+* Install correct Java Version
+* Change Java Home Path to new one permanently
+* Add Jenkins Repository to package manager
+* Install Jenkins
+* Enable and start Jenkins
+```
+
 
   
 
