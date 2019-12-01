@@ -7,7 +7,6 @@
   package:
       name: "{{java.version}}"
       state: present
-  loop:
-    - openjdk-8-jdk
+  
 
 

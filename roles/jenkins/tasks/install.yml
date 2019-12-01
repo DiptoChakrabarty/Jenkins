@@ -1,0 +1,16 @@
+- name: install wget
+  package:
+        name: wget  
+        state: present
+- name: get jenkins
+  uri:
+      url: "{{jenkins.url}}"
+
+- name: import keys
+  command: rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+- name: install jenkins
+  yum:
+      name: jenkins
+      state: present
+  
